@@ -1,33 +1,39 @@
-# AssistLoop Chat Widget for Odoo
+# AssistLoop AI Chatbot for Odoo
 
-Integrate the AssistLoop AI-powered customer support chat widget into your Odoo website.
+Integrate the AssistLoop AI-powered customer support chatbot into your Odoo website.
 
 ## Overview
 
-This Odoo module allows you to easily embed the AssistLoop chat widget on your Odoo-powered website. Once configured, your website visitors can interact with your AI agent for instant customer support.
+This Odoo module allows you to easily embed the AssistLoop AI chatbot on your Odoo-powered website. Once configured, your website visitors can interact with your AI agent for instant customer support.
 
 ## Features
 
 - **Easy Configuration** - Set up through Odoo's Website Settings
-- **Enable/Disable Toggle** - Turn the widget on/off without losing configuration
-- **Position Control** - Place the widget on the left or right side of the screen
-- **Custom Widget URL** - Use a custom widget script URL if needed
-- **Multi-Version Support** - Compatible with Odoo 14.0, 15.0, 16.0, and 17.0
+- **Enable/Disable Toggle** - Turn the chatbot on/off without losing configuration
+- **AI-Powered Support** - 24/7 automated customer support
+- **Human Handoff** - Seamlessly transfer to human agents when needed
+- **Compatible with Odoo 19.0**
 
 ## Requirements
 
-- Odoo 14.0 or higher
+- Odoo 19.0
 - `website` module installed
 - Valid AssistLoop account with a configured AI agent
 
 ## Installation
 
-### Method 1: Manual Installation
+### Method 1: Odoo Apps Store (Recommended)
+
+1. Go to **Apps** in your Odoo instance
+2. Search for **"AssistLoop AI Chatbot"**
+3. Click **Install**
+
+### Method 2: Manual Installation
 
 1. Download or clone this module to your Odoo addons directory:
    ```bash
    cd /path/to/odoo/addons
-   git clone https://github.com/assistloop/assistloop_odoo.git
+   git clone https://github.com/AssistLoop/Odoo.git
    ```
 
 2. Restart Odoo server:
@@ -41,9 +47,9 @@ This Odoo module allows you to easily embed the AssistLoop chat widget on your O
    - Search for "AssistLoop"
 
 4. Install the module:
-   - Click **Install** on "AssistLoop Chat Widget"
+   - Click **Install** on "AssistLoop AI Chatbot"
 
-### Method 2: Odoo.sh
+### Method 3: Odoo.sh
 
 1. Add the module to your repository's `addons` folder
 2. Commit and push changes
@@ -53,23 +59,21 @@ This Odoo module allows you to easily embed the AssistLoop chat widget on your O
 
 1. Navigate to **Website → Configuration → Settings**
 
-2. Scroll to the **AssistLoop Chat Widget** section
+2. Scroll to the **AssistLoop AI Chatbot** section
 
 3. Configure the following options:
 
    | Setting | Description |
    |---------|-------------|
-   | **Enable Chat Widget** | Toggle to show/hide the widget |
+   | **Enable Chat Widget** | Toggle to show/hide the chatbot |
    | **Agent ID** | Your AssistLoop Agent UUID (from AssistLoop dashboard) |
-   | **Widget Position** | Bottom Right or Bottom Left |
-   | **Show on All Pages** | Display widget on every page |
-   | **Widget Script URL** | (Advanced) Custom widget URL |
+   | **Show on All Pages** | Display chatbot on every page |
 
 4. Click **Save**
 
 ## Getting Your Agent ID
 
-1. Log in to your [AssistLoop Dashboard](https://app.assistloop.ai)
+1. Log in to your [AssistLoop Dashboard](https://assistloop.ai/dashboard)
 2. Select your organization
 3. Navigate to your agent
 4. Copy the Agent UUID from the agent settings
@@ -88,12 +92,6 @@ This Odoo module allows you to easily embed the AssistLoop chat widget on your O
 1. Verify your AssistLoop agent is properly configured
 2. Check that the agent has training data
 3. Ensure your AssistLoop subscription is active
-
-### Custom URL not working
-
-1. Verify the URL is accessible
-2. Check for CORS issues in browser console
-3. Ensure the URL points to a valid AssistLoop widget script
 
 ## Technical Details
 
@@ -129,8 +127,6 @@ The module stores configuration in `ir.config_parameter`:
 |-----|-------------|
 | `assistloop.enabled` | Widget enabled state |
 | `assistloop.agent_id` | Agent UUID |
-| `assistloop.position` | Widget position |
-| `assistloop.widget_url` | Custom widget URL |
 | `assistloop.show_on_all_pages` | Show on all pages flag |
 
 ### JavaScript API
@@ -173,10 +169,9 @@ This module is licensed under LGPL-3. See [LICENSE](LICENSE) for details.
 
 ## Changelog
 
-### Version 17.0.1.0.0
+### Version 19.0.1.0.0
 
-- Initial release
-- Basic widget integration
-- Settings configuration
-- Position customization
-- Multi-version support (14.0-17.0)
+- Initial release for Odoo 19.0
+- AI-powered chatbot integration
+- Simple settings configuration
+- Human handoff support
