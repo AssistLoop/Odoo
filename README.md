@@ -37,7 +37,7 @@ Integrate the AssistLoop AI-powered customer support chatbot into your Odoo webs
 ## Support
 
 - **Website**: [https://assistloop.ai](https://assistloop.ai)
-- **Email**: support@assistloop.ai
+- **Email**: hello@assistloop.ai
 
 ## License
 

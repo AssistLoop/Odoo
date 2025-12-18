@@ -33,7 +33,7 @@ Requirements
 
 Support
 -------
-For support, please contact support@assistloop.ai
+For support, please contact hello@assistloop.ai
     """,
     'author': 'AssistLoop',
     'website': 'https://assistloop.ai',
