@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'AssistLoop AI Chatbot',
-    'version': '19.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Website',
     'summary': 'Integrate AssistLoop AI-powered chat widget into your Odoo website',
     'description': """
