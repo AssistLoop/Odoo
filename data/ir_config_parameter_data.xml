@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    AssistLoop Default Configuration Parameters
+    ===========================================
+    
+    These are the default values for AssistLoop configuration.
+    They are loaded when the module is installed.
+    -->
+
+    <data noupdate="1">
+        <!-- Default: Widget disabled -->
+        <record id="assistloop_enabled_default" model="ir.config_parameter">
+            <field name="key">assistloop.enabled</field>
+            <field name="value">False</field>
+        </record>
+
+        <!-- Default: Widget position on the right -->
+        <record id="assistloop_position_default" model="ir.config_parameter">
+            <field name="key">assistloop.position</field>
+            <field name="value">right</field>
+        </record>
+
+        <!-- Default: Show on all pages -->
+        <record id="assistloop_show_on_all_pages_default" model="ir.config_parameter">
+            <field name="key">assistloop.show_on_all_pages</field>
+            <field name="value">True</field>
+        </record>
+
+        <!-- Default: Widget URL (empty means use CDN default) -->
+        <record id="assistloop_widget_url_default" model="ir.config_parameter">
+            <field name="key">assistloop.widget_url</field>
+            <field name="value"></field>
+        </record>
+
+        <!-- Default: Agent ID (empty, must be configured by user) -->
+        <record id="assistloop_agent_id_default" model="ir.config_parameter">
+            <field name="key">assistloop.agent_id</field>
+            <field name="value"></field>
+        </record>
+    </data>
+
+</odoo>

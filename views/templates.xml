@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    AssistLoop Widget Templates
+    ===========================
+    
+    This template injects the AssistLoop chat widget into the website frontend.
+    It extends the main website layout to add the widget loader script.
+    -->
+
+    <!-- Main widget injection template -->
+    <template id="assistloop_widget_assets" inherit_id="website.layout" name="AssistLoop Widget">
+        <xpath expr="//body" position="inside">
+            <t t-set="assistloop_config" t-value="request.env['res.config.settings'].sudo().get_assistloop_config()"/>
+            
+            <!-- Only render if widget is enabled and agent_id is configured -->
+            <t t-if="assistloop_config.get('enabled') and assistloop_config.get('agent_id')">
+                <script type="text/javascript">
+                    (function() {
+                        var script = document.createElement('script');
+                        script.src = '<t t-esc="assistloop_config.get('widget_url') or 'https://assistloop.ai/assistloop-widget.js'"/>';
+                        script.onload = function() {
+                            AssistLoopWidget.init({
+                                agentId: '<t t-esc="assistloop_config.get('agent_id')"/>'
+                            });
+                        };
+                        document.head.appendChild(script);
+                    })();
+                </script>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
